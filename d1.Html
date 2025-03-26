@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景圖重疊(background-repeat)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-div {
+            width: 400px;
+            height: 300px;
+            border: 10px solid rgb(255, 0, 0);
+        }
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tiled-container {
+            background-image: url('1.jpg');
+            background-size: 14%;
+            background-repeat: repeat;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-div img-container">
+            <img src="1.jpg" alt="單張圖片">
+        </div>
+        <div class="image-div tiled-container"></div>
+    </div>
+</body>
+</html>
